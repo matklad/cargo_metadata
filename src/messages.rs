@@ -112,6 +112,7 @@ pub enum Message {
     BuildFinished(BuildFinished),
     /// A line of text which isn't a cargo or compiler message.
     /// Line separator is not included
+    #[serde(skip)]
     TextLine(String),
     #[doc(hidden)]
     #[serde(other)]
